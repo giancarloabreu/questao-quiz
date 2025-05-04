@@ -1,4 +1,6 @@
-public static class Questao {
+import java.util.Scanner;
+
+public class Questao {
     String pergunta = "";
     String opcaoA = "";
     String opcaoB = "";
