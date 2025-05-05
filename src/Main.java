@@ -1,14 +1,57 @@
+import java.sql.Array;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.util.List;
+
 public class Main {
+
     public static void main(String[] args) {
 
-        List<Cabecalho> infos = List.of(
-        new Cabecalho("Centro Univeritário Alfredo Nasser - UNIFAN", "Giancarlo Pinheiro de Abreu", "Brenno Pimenta", "Logística")
-        );
-        infos.forEach(Cabecalho::imprimir);
-    }
+        // Instanciar o cabecalho
 
+        Cabecalho cabecalho = new Cabecalho("Centro Univeritário Alfredo Nasser - UNIFAN",
+                "Giancarlo Pinheiro de Abreu",
+                "Brenno Pimenta",
+                "Tema das perguntas: Logística");
+
+        cabecalho.imprimir(); // imprimir cabecalho
+
+        Scanner scanner = new Scanner(System.in);
+        int opcao = -1;
+
+        do {
+            System.out.println("========= MENU =========");
+            System.out.println("1 - Iniciar Quiz");
+            System.out.println("2 - Ver Curiosidades");
+            System.out.println("3 - Sair");
+            System.out.print("Escolha uma opção: ");
+
+            try {
+                opcao = Integer.parseInt(scanner.nextLine());
+            } catch (NumberFormatException e) {
+                System.out.println("Digite um número válido.");
+                continue;
+            }
+
+            switch (opcao) {
+                case 1:
+                    IniciaQuiz quiz = new IniciaQuiz();
+                    quiz.iniciar(); // metodo que você vai criar na classe IniciaQuiz
+                    break;
+                case 2:
+                    RespostaDetalhada.mostrar(); // Supondo que você tenha essa classe também
+                    break;
+                case 3:
+                    System.out.println("Saindo... Até logo!");
+                    break;
+                default:
+                    System.out.println("Opção inválida.");
+            }
+
+        } while (opcao != 3);
     }
+}

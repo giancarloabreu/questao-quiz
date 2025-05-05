@@ -17,7 +17,7 @@ public class Cabecalho {
 
     public void imprimir(){
 
-        System.out.println(String.format("%s%n%s%n%s%n%s", faculdade, aluno, professor, tema_perguntas));
+        System.out.println(String.format("%s%n%s%n%s%n%s%n","\033[42m" + faculdade + "\033[0m","\033[42m" +  aluno + "\033[0m","\033[42m" +  professor + "\033[0m", "\033[44m" + tema_perguntas + "\033[0m"));
 
     }
 }
