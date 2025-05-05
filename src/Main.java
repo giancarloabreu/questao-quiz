@@ -40,10 +40,10 @@ public class Main {
             switch (opcao) {
                 case 1:
                     IniciaQuiz quiz = new IniciaQuiz();
-                    quiz.iniciar(); // metodo que você vai criar na classe IniciaQuiz
+                    quiz.iniciar(); // metodo criado para mostrar o quiz
                     break;
                 case 2:
-                    RespostaDetalhada.mostrar(); // Supondo que você tenha essa classe também
+                    RespostaDetalhada.mostrar(); // metodo criado para mostrar respostas detalhadas
                     break;
                 case 3:
                     System.out.println("Saindo... Até logo!");
