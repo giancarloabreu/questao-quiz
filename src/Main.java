@@ -26,7 +26,7 @@ public class Main {
         do {
             System.out.println("========= MENU =========");
             System.out.println("1 - Iniciar Quiz");
-            System.out.println("2 - Ver Curiosidades");
+            System.out.println("2 - Ver Explicacao das respostas");
             System.out.println("3 - Sair");
             System.out.print("Escolha uma opção: ");
 
