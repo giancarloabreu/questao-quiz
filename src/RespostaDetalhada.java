@@ -1,5 +1,7 @@
 public class RespostaDetalhada {
 
+    // metodo para imprimir na tela a explicacao das respostas.
+
     public static void mostrar() {
 
         System.out.print(String.format("%s%n", "\033[44m1. Permitir rastreamento em tempo real e gestão preditiva de estoques.\033[0m"));
